@@ -1,0 +1,19 @@
+.w-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 38px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 22px;
+    display: block;
+}
+
+.w-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    left:0;
+}

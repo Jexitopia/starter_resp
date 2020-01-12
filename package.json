@@ -4,10 +4,19 @@
   "description": "Testing starter file structure",
   "main": "index.js",
   "dependencies": {
+    "ajax": "0.0.4",
+    "axios": "^0.19.1",
     "gulp": "^4.0.2"
   },
   "devDependencies": {
-    "sass": "^1.24.4"
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-sass": "^4.0.2",
+    "minifycss": "^1.0.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-uglify": "^3.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
