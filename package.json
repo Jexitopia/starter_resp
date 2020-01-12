@@ -1,0 +1,25 @@
+{
+  "name": "gulptry",
+  "version": "1.0.0",
+  "description": "Testing starter file structure",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "sass": "^1.24.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jexitopia/starter_resp.git"
+  },
+  "author": "Josefin Klemola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jexitopia/starter_resp/issues"
+  },
+  "homepage": "https://github.com/Jexitopia/starter_resp#readme"
+}
