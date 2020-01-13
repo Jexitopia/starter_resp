@@ -22,7 +22,7 @@ function defaultTask(cb) {
 
  gulp.task('js', function(){
     return gulp.src(['src/js/*.js'])
-        .pipe(concat('all.js'))
+        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
