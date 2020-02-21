@@ -44,7 +44,8 @@ if ( ! function_exists( 'nounowstarter_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'nounowstarter' ),
+			'main-nav' => esc_html__( 'Primary Menu', 'nounowstarter' ),
+			'footer-menu' => esc_html( 'Footer Menu', 'nounowstarter'),
 		) );
 
 		/*
@@ -113,6 +114,21 @@ function nounowstarter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar(array(
+		'name' => 'Best-Posts',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+	));
+	register_sidebar(array(
+		'name' => 'side-w',
+		'before_widget' => '<div class = "rec-wrapper">',
+		'after_widget' => '</div>',
+	));
+	register_sidebar(array(
+		'name' => 'load-more-btn',
+		'before_widget' => '<div class = "load-more-btn">',
+		'after_widget' => '</div>',
+	));
 }
 add_action( 'widgets_init', 'nounowstarter_widgets_init' );
 
@@ -122,7 +138,11 @@ add_action( 'widgets_init', 'nounowstarter_widgets_init' );
 function nounowstarter_scripts() {
 	wp_enqueue_style( 'nounowstarter-style', get_stylesheet_uri() );
 
+	wp_enqueue_style('main-styles', get_template_directory_uri() . '/public/css/main.css', array(), filemtime(get_template_directory() . 'public/css/main.css'), false);
+
 	wp_enqueue_script( 'nounowstarter-navigation', get_template_directory_uri() . '/public/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/public/js/main.js', array(), '20151215', true  );
 
 	wp_enqueue_script( 'nounowstarter-skip-link-focus-fix', get_template_directory_uri() . '/public/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -159,3 +179,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/includes/jetpack.php';
 }
 
+
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+	return 20;
+	}
+	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );

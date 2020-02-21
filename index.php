@@ -13,10 +13,15 @@
  */
 
 get_header();
+global $wp_query;
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="main-layout">
+	<div id="primary" class="content-area news-section">
+        <main id="main" class="site-main post-list show"
+        data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>"
+        data-max="<?= $wp_query->max_num_pages; ?>"
+        >
 
 		<?php
 		if ( have_posts() ) :
@@ -41,19 +46,22 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
+?>
 
-			the_posts_navigation();
-
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("load-more-btn") ) : ?>
+<?php endif;?>
+<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
-
+					
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    </div><!-- #primary -->
+    <?php get_sidebar(); ?>
+</div> <!--Main layout -->
 <?php
-get_sidebar();
+
 get_footer();

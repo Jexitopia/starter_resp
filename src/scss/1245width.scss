@@ -1,0 +1,19 @@
+
+@media screen and (min-width: 1245px) {
+    .page-container {
+    max-width: 1150px;
+    width: calc(100% - 30px);
+    margin: auto;
+    margin-top: 90px;
+    }
+
+    .header-container {
+        max-width: 1150px;
+    }
+    .keyword-section {
+        width: 100%;
+    }  .socials {
+        right: 0;
+    }
+
+}

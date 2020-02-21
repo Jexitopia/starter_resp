@@ -8,28 +8,19 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			nounowstarter_posted_on();
-			nounowstarter_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php nounowstarter_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php nounowstarter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" class="news-box">             
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="링크: <?php the_title(); ?>" class="link-box">
+                        <?php echo the_post_thumbnail( 'full', array( 'style' => 'width=100%')); ?>
+                        <div class="dark-overlay"></div>                   
+                            <div class="news-text-position">
+                            <h5 class="post-title"><?php the_title(); ?></h5>  
+                            <p class="subtitle"> <?php the_excerpt(); ?></p>
+                            </a>
+                            <div class="credit-position">
+                                <div class="credit">
+								
+								<span class="cat-link"><?php the_category('slug') ?></span>
+                     <p> &centerdot; <?php the_time(); ?></p></div> 
+                            </div>
+                        </div> <!-- End of news-text-position -->              
 </article><!-- #post-<?php the_ID(); ?> -->
