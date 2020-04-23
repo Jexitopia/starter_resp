@@ -21,9 +21,8 @@ function defaultTask(cb) {
  });
 
  gulp.task('js', function(){
-    return gulp.src(['src/js/*.js'])
-        .pipe(concat('main.js'))
-        .pipe(uglify())
+    return gulp.src(['src/js/main.js'])
+        .pipe(concat('main.js'))       
         .pipe(gulp.dest('public/js'));
 });
 
@@ -40,9 +39,10 @@ gulp.task('images', function() {
   });
 
 gulp.task('watch', function(){
-    gulp.watch('src/scss/main.scss', gulp.series('sass'));
+    gulp.watch('src/scss/*.scss', gulp.series('sass'));
     gulp.watch('src/js/*.js', gulp.series('js'));
     gulp.watch('src/images/*.*', gulp.series('images'));
     });
-  
+
+
   exports.default = defaultTask;

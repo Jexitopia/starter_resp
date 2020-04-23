@@ -1,0 +1,99 @@
+.single-date {
+    font-size: 12px;
+    color: $maingray;
+}
+
+.single-meta {
+    position: relative;
+
+    span {
+        vertical-align: middle;
+    }
+
+    a {
+        font-size: 24px;
+        line-height: 1.2;
+        color: $mainaccent;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    img {
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    p {
+        font-size: 12px;
+        color: $maingray;
+        line-height: 20px;
+    }
+}
+
+
+a.tag {
+    padding: 4px 18px;
+    background: $thirtypblack;
+    border-radius: 20px;
+    color: $white;
+    font-weight: 400;
+    margin-right: 5px;
+    line-height: 2.5;
+
+    :hover {
+        background: $fiftypblack;
+    }
+}
+
+figcaption {
+    text-align: center;
+    font-size: 12px;
+    color: $maingray;
+    font-style: italic;
+}
+
+.single-post-article {
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-left: -3px;
+    }
+    h2, h3, h4 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-top: 32px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: 20px
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    ul {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    }
+    img {
+    height: 100%;
+    object-fit: fill;
+    }
+    p {
+    margin-top: 16px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    }   
+
+}
+

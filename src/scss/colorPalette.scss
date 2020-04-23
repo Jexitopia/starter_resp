@@ -1,2 +1,28 @@
-$main: #000;
-$background: #000;
+/* Solid colors */
+$mainaccent: #ff485b;
+$white: #fff;
+$offwhite: #f6f8f9;
+$black: #000;
+$moon: rgb(255, 214, 32);
+$highlighter: rgb(59, 216, 192);
+$nightmodebg: #202125;
+$maingray: #999;
+
+/* Semi-Transparent colors */
+$tenpblack: rgba(0,0,0,0.1);
+$thirtypblack: rgba(0,0,0,0.3);
+$fiftypblack: rgba(0,0,0,0.5);
+$seventypblack: rgba(0, 0, 0, 0.7);
+
+$raisedbgwhite: rgba(255, 255, 255, 0.08);
+$tenpwhite: rgba(255, 255, 255, 0.1);
+$twentypwhite: rgba(255, 255, 255, 0.2);
+$thirtypwhite: rgba(255, 255, 255, 0.3);
+$fortypwhite: rgba(255, 255, 255, 0.4);
+$seventypwhite: rgba(255, 255, 255, 0.7);
+
+
+/* Box-shadows and gradients */
+$gradient-overlay: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+$boxshadow: 0 1px 1px rgba(173,168,168,0.1);
+$headboxshadow:  0 1px 5px rgba(0,0,0,.16);

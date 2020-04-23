@@ -1,19 +1,32 @@
-.w-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 38px;
-    width: 100%;
-    position: relative;
-    margin-bottom: 22px;
-    display: block;
-}
 
-.w-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: #000;
-    left:0;
-}
+/* Mobile font sizes */
+
+$mobileheading: 28px;
+$mobilesingleheading: 24px;
+$mobile5: 18px;
+$mobileicons: 17px;
+$mobile4: 16px;
+$mobile3: 14px;
+$mobile2: 10px;
+$mobile1: 8px;
+
+
+/* Desktop font sizes */
+
+$categorytitle: 40px;
+$ttitle: 30px;
+$biggericons: 22px;
+$atitle: 20px;
+$menufontsize: 18px;
+$sidebarh1: 18px;
+$tsubtitle: 16px;
+$asubtitle: 16px;
+$desktopicons: 16px;
+$sidebarh2: 14px;
+$sidebarnr: 14px;
+$tcredit: 14px;
+$alink: 14px;
+$acredit: 12px;
+
+
+/* Universal */
